@@ -10,10 +10,9 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #0f172a;
+    background-color: #0e1b31;
 }
 .navbar {
-    /* position: absolute; */
     margin: 2rem;
     border-radius: 45px;
     width: 95%;
@@ -48,46 +47,71 @@ html, body {
 .nav-links a:hover {
     color: #facc15;
 }
-.portfolio h2 {
-    color: #facc15;
+.portfolio {
+    padding: 50px;
+    background-color: #0e1b31;
+    color: white;
     text-align: center;
-    margin-bottom: 3rem;
-    font-size: 2rem;
+}
+.portfolio h2 {
+    font-size: 2.5em;
+    color: #FFD700;
+    margin-bottom: 40px;
+}
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.project-card-link:hover .project-card {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 10px rgba(0, 255, 255, 0.2);
 }
 .project-grid {
     display: grid;
-    gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 30px;
+    padding: 20px 0;
 }
 .project-card {
-    background-color: #172235;
-    border-radius: 1rem;
+    background-color: #14243d;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
 }
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 .project-img {
     width: 100%;
-    height: 160px;
+    height: 180px;
     object-fit: cover;
 }
 .project-content {
-    padding: 1.2rem;
+    padding: 20px;
+    text-align: left;
 }
 .project-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #f8fafc;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #fff;
 }
 .project-desc {
-    font-size: 0.9rem;
-    color: #cbd5e1;
-    margin-top: 0.5rem;
+    font-size: 0.95em;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tags span {
+    background-color: #1e3a5f;
+    color: #00ffff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
 }
 .footer {
     background-color: #0f172a;
@@ -95,4 +119,60 @@ html, body {
     padding: 1rem;
     font-size: 0.9rem;
     color: #cbd5e1;
+}
+/* Mobile (≤768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    .portfolio {
+        padding: 30px 20px;
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .project-img {
+        height: 160px;
+    }
+    .project-content {
+        padding: 15px;
+    }
+    .project-title {
+        font-size: 1.3em;
+    }
+}
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+    .navbar {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+    .portfolio h2 {
+        font-size: 2em;
+    }
+    .project-img {
+        height: 140px;
+    }
+    .project-title {
+        font-size: 1.2em;
+    }
+    .project-desc {
+        font-size: 0.85em;
+    }
+    .tags span {
+        font-size: 0.7em;
+        padding: 4px 8px;
+    }
 }
