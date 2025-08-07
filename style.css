@@ -18,7 +18,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 2rem;
-    background-color: #0f172a;
+    background-color: #0e1b31;
     z-index: 2;
 }
 .logo {
@@ -146,7 +146,7 @@ body {
     line-height: 1.8;
 }
 .skills {
-    background-color: #172235;
+    background-color: #0e1b31;
     color: #f8fafc;
     padding: 4rem 2rem;
     text-align: center;
@@ -158,21 +158,22 @@ body {
 }
 .skill-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1100px;
     margin: 0 auto;
 }
 .skill-card {
-    background-color: #0f172a;
+    background-color: #2a4ea7;
     border-radius: 1rem;
     padding: 2rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(250, 204, 21, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
 }
 .skill-card:hover {
     transform: translateY(-8px);
+    box-shadow: 0 6px 28px rgba(250, 204, 21, 0.25);
 }
 .skill-card i {
     font-size: 1.8rem;
@@ -184,16 +185,16 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #f8fafc;
+    color: #fefce8; 
 }
 .skill-card p {
     font-size: 0.9rem;
-    color: #cbd5e1;
+    color: #e2e8f0;
     line-height: 1.5;
 }
 .hobby {
     padding: 3rem 1rem;
-    background-color: #1c283c;
+    background-color: #0e1b31;
     color: #f8fafc;
     text-align: center;
 }
@@ -210,16 +211,15 @@ body {
     justify-content: center;
 }
 .hobby-card {
-    background-color: #0f172a;
-    border-radius: 0.75rem;
-    padding: 1.5rem;
-    width: 100%;
-    max-width: 200px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease;
+    background-color: #2a4ea7;
+    border-radius: 1rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 20px rgba(250, 204, 21, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .hobby-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 6px 28px rgba(250, 204, 21, 0.2);
 }
 .hobby-card .icon {
     font-size: 1.5rem;
@@ -233,6 +233,7 @@ body {
     object-fit: cover;
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 .hobby-card h3 {
     margin-top: 5px;
